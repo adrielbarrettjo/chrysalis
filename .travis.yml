@@ -1,2 +1,10 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: 4bLYMpUa+CzQ7aJJOkib3a+dR8WdyATPYGbD8UoFG5MSWZw6w+nBW0/nMcA5Q3Q2ZTwE965jZ7+yqZoi8E3mSMaBWorS/4q+ps57JMOZlxOKZ4ZXoHTwoxwbiroeDhuX6dS435O6GvuwYlpN3QpaFKxQO1UH4qk536m0ViA35fAfAYwgSsrMWa2PwO3vNm/9J0nd4DcmItsRpRPZ9driKyRTUHNtswUNOn+vmRP/V7cdk0tNNO3P/aa6YwVbpJ9THi+81yaP3nQI4siBByaD13Pg9Usi/Wi5s3DLGA1CnURRbUQ3gWLUnuyY8OYxOpsgzUzDTh2tNurZXyjpPSnajb/TIlrmLjhXjJU+d5XlzOPa6yQinEuwvLoaFgoWl7IIumlCGY0ExfWnq0tDevVXAJKBJOzOk80v9yYJbKv7MWna6SZyBqOL6HUTeNMaCE0Sc1xN7BclTUtEqxK3K4LJwWawoRUcmklcYsPV11OfbxLHl4yDTg3/0O6HPezCeeCybql7O19iamFrQ7RMHsAN7iNwyVUSAUVGRLlxVBwUOB00te0/pFr99FTzhRIdXG8ilMkm4Qqa2jetfZu2m0ZORk5ux1gFn+SvGI0jxfpJK8vhP/dct4oEpmVibj6wuXWVhU9HsvzdWeul5dxc8o7P8b69rf4O7phNhLGypRU5tPQ=
+  app: rocky-cove-47331
+  on:
+    repo: adrielbarrettjo/chrysalis
+deploy:app: rocky-cove-47331
