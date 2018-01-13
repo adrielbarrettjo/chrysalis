@@ -7,4 +7,4 @@ deploy:
   app: rocky-cove-47331
   on:
     repo: adrielbarrettjo/chrysalis
-deploy:app: rocky-cove-47331
+
