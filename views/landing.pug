@@ -1,8 +1,52 @@
 extends layout
 
 block content
-  header Chrysalis 
-  div.landing Welcome to the new budget app. Everyone knows they need a budget, but sticking to that budget is a different story. Chrysalis makes sticking to your budget as easy as possible. 
+	header Chrysalis 
+	div.landing Welcome to the new budget app. Everyone knows they need a budget, but sticking to that budget is a different story. Chrysalis makes sticking to your budget as easy as possible.
+	.logo login
+	form.login(action='/login', method='post')
+		div
+			label Username:
+			input(type='text', name='username')
+		div
+			label Password:
+			input(type='password', name='password')
+		div
+			input(type='submit', value='login')
+		.or-create-new
+			p
+			| new user? 
+			a(href='#') create new account
+
+	.logo or signup
+	form.create-new-user(action='/users', method='post')
+		div
+			label First Name:
+			input(type='text', name='firstName')
+		div
+			label Last Name:
+			input(type='text', name='lastName')
+		div
+			label Username:
+			input(type='text', name='username')
+		div
+			label Password (min 10 characters):
+			input(type='password', name='password')
+		div
+			input(type='submit', value='Sign Up')
+
+	//- div.sign-up-form(style='padding:50px 0')
+	//- 	.logo login or signup
+	//- 		form.sign-up-form(method='post', action='/')
+	//- 			div.form-group		
+	//- 			input#lg_username.form-control(type='text', name='lg_username', placeholder='username')
+	//- 			div.form-group
+	//- 			input#lg_password.form-control(type='password', name='lg_password', placeholder='password')
+	//- 			//- button.login-button(type='submit')
+	//- 			button.new-user-button(type='submit')
+
+
+
 
 
 

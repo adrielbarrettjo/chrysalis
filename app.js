@@ -11,6 +11,7 @@ var mongoose = require('mongoose');
 // var users = require('./routes/users');
 // var users = require('./users/router').router;
 var myrouter = require('./routes/myrouter');
+var router = require('./auth/router');
 
 var app = express();
 // const { PORT } = require('./bin/www');
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', users);
 app.use('/', myrouter);
+// app.use('/', router);
 
 app.listen(process.env.PORT || 3000);
 
@@ -60,14 +62,14 @@ app.use(function(err, req, res, next) {
 // add let server, run server, and close server
 let server;
 
-function runServer(port = PORT) { //*?* why do there need to be inputs now?
+function runServer( port = PORT) { //*?* why do there need to be inputs now?
 	// const port = process.env.PORT || 8080;
 	return new Promise((resolve, reject) => {
-	// 	console.log(DATABASE_URL);
-	// 	// mongoose.connect("mongodb://dbuser:dbpassword@ds245287.mlab.com:45287/blog-api-mongoose", { useMongoClient: true}, err => {
-	// 		if (err) {
-	// 			return reject(err); //*?* how does this work?
-	// 		}
+		// console.log(DATABASE_URL);
+		 mongoose.connect("mongodb://chrysalis:chrysalis@ds155577.mlab.com:55577/chrysalis", { useMongoClient: true}, err => {
+			if (err) {
+				return reject(err); //*?* how does this work?
+			}
 
 		server = app.listen(port, () => {
 			console.log(`Your app is listening on port ${port}`);
@@ -80,6 +82,7 @@ function runServer(port = PORT) { //*?* why do there need to be inputs now?
 			// it seems like it's because the connection is within the runserver, so it needs to 
 			reject(err)
 		});
+});
 });
 };
 
