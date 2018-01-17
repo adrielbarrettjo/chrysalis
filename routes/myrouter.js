@@ -22,6 +22,10 @@ router.get('/transactions', function(req, res, next) {
   res.render('transactions', { title: 'Express' });
 });
 
+router.get('/new-user', function(req, res, next) {
+  res.render('new-user', { title: 'Express' });
+});
+
 // login is in auth folder
 
 

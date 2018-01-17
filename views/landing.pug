@@ -16,24 +16,24 @@ block content
 		.or-create-new
 			p
 			| new user? 
-			a(href='#') create new account
+			a(href='./new-user') create new account
 
-	.logo or signup
-	form.create-new-user(action='/users', method='post')
-		div
-			label First Name:
-			input(type='text', name='firstName')
-		div
-			label Last Name:
-			input(type='text', name='lastName')
-		div
-			label Username:
-			input(type='text', name='username')
-		div
-			label Password (min 10 characters):
-			input(type='password', name='password')
-		div
-			input(type='submit', value='Sign Up')
+	//- .logo or signup
+	//- form.create-new-user(action='/users', method='post')
+	//- 	div
+	//- 		label First Name:
+	//- 		input(type='text', name='firstName')
+	//- 	div
+	//- 		label Last Name:
+	//- 		input(type='text', name='lastName')
+	//- 	div
+	//- 		label Username:
+	//- 		input(type='text', name='username')
+	//- 	div
+	//- 		label Password (min 10 characters):
+	//- 		input(type='password', name='password')
+	//- 	div
+	//- 		input(type='submit', value='Sign Up')
 
 	//- div.sign-up-form(style='padding:50px 0')
 	//- 	.logo login or signup

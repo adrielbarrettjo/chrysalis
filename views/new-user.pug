@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	header Chrysalis 
+	div.landing Welcome to the new budget app. Everyone knows they need a budget, but sticking to that budget is a different story. Chrysalis makes sticking to your budget as easy as possible.
+	.logo Signup
+	form.create-new-user(action='/users', method='post')
+		div
+			label First Name:
+			input(type='text', name='firstName')
+		div
+			label Last Name:
+			input(type='text', name='lastName')
+		div
+			label Username:
+			input(type='text', name='username')
+		div
+			label Password (min 10 characters):
+			input(type='password', name='password')
+		div
+			input(type='submit', value='Sign Up')
