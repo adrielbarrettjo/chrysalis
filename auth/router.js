@@ -21,7 +21,7 @@ router.use(bodyParser.json());
 router.post('/login', localAuth, (req, res) => {
   const authToken = createAuthToken(req.user.serialize());
   res.json({authToken});
-  res.redirect('/dashboard')
+  // res.redirect('/dashboard')
 });
 
 
